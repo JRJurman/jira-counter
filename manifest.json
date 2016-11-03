@@ -1,0 +1,27 @@
+{
+  "manifest_version": 2,
+
+  "name": "timeboxer",
+  "description": "chrome extension to timebox how long you're on a page",
+  "version": "1.0.0",
+
+  "browser_action": {},
+
+  "content_scripts": [
+    {
+      "matches": ["https://*/*"],
+      "js": ["content.js"]
+    }
+  ],
+
+  "background": {
+    "page": "background.html",
+    "persistent": true
+  },
+
+  "permissions": [
+    "activeTab",
+    "tabs",
+    "storage"
+  ]
+}

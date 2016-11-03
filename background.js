@@ -10,7 +10,7 @@ var height = 24;
 c.setAttribute("width", width);
 c.setAttribute("height", height)
 
-var fontSize = height*1;
+var fontSize = height;
 ctx.font = fontSize+"px Sans-Serif";
 
 var oldPort;
@@ -24,8 +24,8 @@ chrome.runtime.onConnect.addListener(function(port) {
     // set timeout color
     var color = (boxCounter < 9) ? "green" : "red";
 
-    // Create gradient
-    var gradient = ctx.createLinearGradient(0, 0, 0, c.height);
+    // Create gradient for number
+    var gradient = ctx.createLinearGradient(0, fontSize*0.3, 0, c.height);
     gradient.addColorStop("0", "gray");
     gradient.addColorStop(Math.abs(0.99 - (boxCounter % 1)), "gray");
     gradient.addColorStop(        (1.00 - (boxCounter % 1)) , color);

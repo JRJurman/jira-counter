@@ -10,6 +10,6 @@ timeboxer.onDisconnect.addListener(() => {
 });
 
 clearer = setInterval(function() {
-  boxCounter += (10/1200);
+  boxCounter += (1/1200);
   timeboxer.postMessage(boxCounter);
 }, 50);

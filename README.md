@@ -1,3 +1,2 @@
-# scroll-saver
-Never lose your place by a Refresh again!
-Scroll Saver! Here to save where you were!
+# timeboxer
+Beat up long meetings by keeping track of how long you've been on a page.
